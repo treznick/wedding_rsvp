@@ -6,7 +6,7 @@ class RsvpsController < ApplicationController
  def create
    @rsvp = Rsvp.new(rsvp_params)
    if @rsvp.save
-     redirect_to action: 'new', flash: :success
+     redirect_to new_rsvp_url, flash: :success
    else
      flash_now!(:error)
      render('new')
