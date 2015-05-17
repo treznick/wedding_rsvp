@@ -1,0 +1,6 @@
+en:
+  flash_messages:
+    rsvps:
+      create:
+        success: "RSVP successfully recorded!"
+        error: "There were problems with your input."

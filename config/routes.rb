@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root :to => "static_pages#index"
 
-  get 'rsvp' => 'rsvps#new'
-  resource :rsvp, only: [:create]
+  match '/rsvp', to: 'rsvps#new', as: :new_rsvp, via: :get
+  post '/rsvp', to: 'rsvps#create', as: :rsvps
 end
