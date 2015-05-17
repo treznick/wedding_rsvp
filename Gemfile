@@ -37,7 +37,13 @@ gem "bootstrap_flash_messages"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 #
+group :production do
+  gem 'puma'
+  gem 'rails_12factor'
+end
+
 gem 'byebug', group: [:development]
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,3 +57,4 @@ group :development, :test do
 end
 
 gem "rspec-rails", :group => [:development, :test]
+ruby "2.2.2"
