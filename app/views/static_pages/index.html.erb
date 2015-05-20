@@ -70,8 +70,22 @@
         <div class="col-md-12 text-center">
           <h2>Ceremony &amp; Reception</h2>
           <dl class="dl-horizontal">
+            <dt><strong>Address</strong></dt><dd>
+              <a href="https://www.google.com/maps/place/2+Lighthouse+Rd,+New+Haven,+CT+06512" target="_blank">
+                <address>
+                  2 Lighthouse Rd.<br>
+                  New Haven, CT 06512
+                </address>
+              </a>
+            </dd>
             <dt><strong>Ceremony</strong></dt><dd>5:30 PM, on the beach near the Lighthouse (weather permitting).</dd>
             <dt><strong>Reception</strong></dt><dd>Immediately following the ceremony, inside the Carousel Pavillion.</dd>
+          </dl>
+          <h3>Transportation &amp Parking</h3>
+          <dl class="dl-horizontal">
+            <dt>Shuttle</dt><dd>A shuttle will leave the Mariott Courtyard and the Study hotels at 5:00pm to go to Lighthouse Point. From 10:00 to 11:15 p.m., one bus will shuttle back and forth from Lighthouse Point to the hotels.</dd>
+            <dt>Taxi</dt><dd>Call <a href="tel://203-777-7777">(203) 777-7777</a> for a cab.</dd>
+            <dt>Parking</dt><dd>Parking is free for our guests. As you enter the Park continue straight after the ticket booth stop, following the green signs to “Carousel parking.” Go right into the directed lot (surrounded by colored concrete blocks). Drive to the far end of the directed lot (the Lighthouse can be seen in the distance to your left), park your vehicle and walk to the ‘RED GATE” on the access road.</dd>
           </dl>
         </div>
       </div>
@@ -123,7 +137,7 @@
         <a href="http://www.macys.com/registry/wedding/guest/?registryId=6333159" class="hotel-link list-group-item"  target="_blank">Macy's</a>
         <a href="http://www.rei.com/GiftRegistryDetails/GR111678846" class="hotel-link list-group-item"  target="_blank">REI</a>
       </div>
-      <p class="big-text">Alternatively, please consider a charitable donation using the <a href="http://www.idofoundation.org/cgi-bin/viewdonations.cgi?OccasionID=166742" target="_blank">I Do Foundation</a></p>
+      <p class="big-text">Alternatively, please consider a donation to one of our favorite charities using the <a href="http://www.idofoundation.org/cgi-bin/viewdonations.cgi?OccasionID=166742" target="_blank">I Do Foundation</a></p>
     </div>
   </article>
   <article class="pavillion_main">
@@ -135,7 +149,7 @@
   <article class="rsvp" id="rsvp">
     <div class="container">
       <h2>R.S.V.P</h2>
-      <p class="big-text">Coming Soon</p>
+      <%= link_to 'Click here to R.S.V.P', new_rsvp_path, class: "btn btn-default" %>
     </div>
   </article>
 </section>

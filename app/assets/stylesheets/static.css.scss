@@ -21,7 +21,6 @@ h1,h2,h3,h4,h5 {
 
 h1 {
   font-family: 'Calligraffitti', cursive;
-  font-size:92px;
   margin:0;
   padding:0;
   font-style:none;
@@ -29,7 +28,6 @@ h1 {
 
 h2 {
   font-family: 'Calligraffitti', cursive;
-  font-size: 40px;
   margin:0;
   padding: 40px;
   font-style:normal;
@@ -42,7 +40,6 @@ h2 span {
 
 h3 {
   font-family: 'Calligraffitti', cursive;
-  font-size:3.5em;
   padding:20px 0;
   font-style:normal;
 }
@@ -53,7 +50,6 @@ h3 span {
 
 h4 {
   font-family: 'Calligraffitti', cursive;
-  font-size:2.5em;
   margin:0 0 20px;
   padding:0;
   font-style:normal;
@@ -550,26 +546,6 @@ footer p{
 }
 
 @media (max-width:768px) {
-    h1 {
-      font-size:4em;
-  }
-
-  h2 {
-    font-size:3em;
-  }
-
-  h3 {
-    font-size:2em;
-  }
-
-  h4 {
-    font-size:1.5em;
-  }
-
-  h5 {
-    font-size:1.3em;
-  }
-
   .logo_top {
     margin-bottom:30px;
   }
