@@ -1,26 +1,28 @@
 <div class="container-fluid">
-  <div class="well col-sm-6">
-    <div class="row">
-      <div class="col-sm-2">
-      </div>
-      <div class="col-sm-8">
+  <div class="panel panel-default form-panel">
+    <div class="panel-heading">
+      <div class="text-center">
         <h1>RSVP Form</h1>
       </div>
-      <div class="col-sm-2">
-      </div>
     </div>
-    <div id="flash_messages"><%= flash_messages(:close, :fade) %></div>
-    <div class="row">
-      <div class="col-sm-8">
-        <%= simple_form_for(@rsvp) do |f| %>
-          <%= f.input :name %>
-          <%= f.input :attending, as: :radio_buttons %>
-          <%= f.input :meal_choice_id, collection: MealChoice.all, as: :radio_buttons, label_method: :name, value_method: :id %>
-          <%= f.input :dietary_restrictions, as: :text %>
-          <%= f.button :submit, "Save RSVP" %>
-        <% end %>
+    <div class="panel-body">
+      <div class="row">
+        <div id="flash_messages">
+          <%= flash_messages(:close, :fade) %>
+        </div>
       </div>
+      <div class="row">
+        <%= simple_form_for(@rsvp, html: { class: 'form-horizontal'}) do |f| %>
+          <%= f.input :name, wrapper_html: {class: 'form-group row col-sm-8 col-lg-8'}%>
+          <%= f.input :attending, as: :radio_buttons, wrapper_html: {class: 'form-group row col-sm-8 col-lg-8'} %>
+          <%= f.input :meal_choice_id, collection: MealChoice.all, as: :radio_buttons, label_method: :name, value_method: :id, wrapper_html: {class: 'form-group row col-sm-8 col-lg-8'} %>
+          <%= f.input :dietary_restrictions, as: :text, wrapper_html: {class: 'form-group row col-sm-8 col-lg-8'} %>
+          <div class='form-group row col-sm-8 col-lg-8'>
+            <%= f.button :submit, "Save RSVP" %>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <%= link_to "Home", root_path, class: "pull-right" %>
   </div>
+  <%= link_to "Home", root_path, class: "pull-right" %>
 </div>
