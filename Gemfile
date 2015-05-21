@@ -28,6 +28,9 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 gem "simple_form"
 gem "bootstrap_flash_messages"
+
+gem "activeadmin", github: 'activeadmin'
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
