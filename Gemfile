@@ -41,6 +41,7 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 #
 group :production do
+  gem 'newrelic_rpm'
   gem 'puma'
   gem 'rails_12factor'
 end
