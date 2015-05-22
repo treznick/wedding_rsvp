@@ -627,4 +627,24 @@ footer p{
   .banner-line h2 span {
     display:block;
   }
+
+.couple_main {
+  text-align:center;
+  //FIXME
+  background:image-url('couple-mobile.jpg') no-repeat center center;
+  background-size: 150% auto;
+}
+.couple_main_parallax {
+  height: 100%;
+  padding: 500px 0 0;
+  background-size: cover;
+  //FIXME
+  background:image-url('arrow.png') repeat-x top;
+}
+
+.couple_bottom_bg {
+  padding-bottom: 150px;
+  //FIXME
+  background:image-url('arrow1.png') repeat-x bottom;
+}
 }
