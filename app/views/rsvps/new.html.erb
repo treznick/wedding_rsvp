@@ -10,6 +10,9 @@
         <div id="flash_messages">
           <%= flash_messages(:close, :fade) %>
         </div>
+        <div class="panel">
+          <p class="lead"><strong>Note:</strong> To properly record individual meal choices, please fill this form out once per guest.</p>
+        </div>
       </div>
       <div class="row">
         <%= simple_form_for(@rsvp, html: { class: 'form-horizontal'}) do |f| %>
