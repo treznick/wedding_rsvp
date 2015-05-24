@@ -1,17 +1,6 @@
 ActiveAdmin.register Rsvp do
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
+  permit_params :name, :attending, :dietary_restrictions, :meal_choice_id
   index do
     selectable_column
     column :id
@@ -23,6 +12,7 @@ ActiveAdmin.register Rsvp do
         rsvp.meal_choice.reporting_name
       end
     end
+    actions
   end
 
   csv do
@@ -36,6 +26,16 @@ ActiveAdmin.register Rsvp do
     end
     column :created_at
     column :updated_at
+  end
+
+  form do |f|
+    f.inputs "RSVP Details" do
+      f.input :name
+      f.input :attending
+      f.input :meal_choice_id, as: :radio, collection: MealChoice.all, label: :name
+      f.input :dietary_restrictions
+    end
+    f.actions
   end
 
 
