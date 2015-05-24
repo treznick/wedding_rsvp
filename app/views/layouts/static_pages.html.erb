@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.14/themes/css/cartodb.css" />
     <%= stylesheet_link_tag("static", media: "all", "data-turbolinks-track" => true) %>
     <%= csrf_meta_tags %>
   </head>
@@ -17,7 +18,17 @@
 
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.14/cartodb.js"></script>
     <%= javascript_include_tag("jquery.easytabs", "data-turbolinks-track" => true)%>
     <%= javascript_include_tag("static", "data-turbolinks-track" => true)%>
+    <script>
+      $(document).ready( function() {
+        cartodb.createVis('map', 'https://treznick.cartodb.com/api/v2/viz/653b7a38-0214-11e5-acee-0e24745e8b53/viz.json', {
+          center_lat: 41.2489134,
+          center_lon: -72.9031886,
+          zoom: 16
+        });
+      });
+    </script>
   </body>
 </html>
