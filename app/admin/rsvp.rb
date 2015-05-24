@@ -13,6 +13,11 @@ ActiveAdmin.register Rsvp do
       end
     end
     actions
+    column "Comments" do |rsvp|
+      ActiveAdmin::Comment.
+        where(ActiveAdmin::Comment.arel_table[:resource_type].eq(Rsvp.to_s)).
+        where(ActiveAdmin::Comment.arel_table[:resource_id].eq(rsvp.id.to_s)).count
+    end
   end
 
   csv do
