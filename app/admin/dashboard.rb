@@ -3,13 +3,20 @@ ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
   content title: proc{ I18n.t("active_admin.dashboard") } do
-    div class: "blank_slate_container", id: "dashboard_default_message" do
-      span class: "blank_slate" do
-        span I18n.t("active_admin.dashboard_welcome.welcome")
-        small I18n.t("active_admin.dashboard_welcome.call_to_action")
+    columns do
+      column do
+        panel "RSVP Count" do
+          span Rsvp.count
+        end
+        panel "Recent RSVPs" do
+          ul do
+            Rsvp.last(5).map do |rsvp|
+              li link_to(rsvp.name, admin_rsvp_path(rsvp))
+            end
+          end
+        end
       end
     end
-
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do
