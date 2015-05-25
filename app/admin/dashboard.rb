@@ -10,7 +10,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
         panel "Recent RSVPs" do
           ul do
-            Rsvp.last(5).map do |rsvp|
+            Rsvp.last(5).reverse.map do |rsvp|
               li link_to(rsvp.name, admin_rsvp_path(rsvp))
             end
           end
