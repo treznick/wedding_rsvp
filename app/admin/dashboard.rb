@@ -16,6 +16,14 @@ ActiveAdmin.register_page "Dashboard" do
           end
         end
       end
+      column do
+        panel "Attending Count" do
+          span Rsvp.attending.count
+        end
+        panel "Not Attending Count" do
+          span Rsvp.not_attending.count
+        end
+      end
     end
     # Here is an example of a simple dashboard with columns and panels.
     #
