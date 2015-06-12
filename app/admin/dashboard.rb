@@ -17,11 +17,17 @@ ActiveAdmin.register_page "Dashboard" do
         end
       end
       column do
-        panel "Attending Count" do
-          span Rsvp.attending.count
+        panel "Attending" do
+          ul do
+            li "Count: #{Rsvp.attending.count}"
+            li "Percent: #{ ((Rsvp.attending.count.to_f / Rsvp.count.to_f) * 100).round(2)} %"
+          end
         end
-        panel "Not Attending Count" do
-          span Rsvp.not_attending.count
+        panel "Not Attending" do
+          ul do
+            li "Count: #{Rsvp.not_attending.count}"
+            li "Percent: #{ ((Rsvp.not_attending.count.to_f / Rsvp.count.to_f) * 100).round(2)} %"
+          end
         end
       end
       column do
